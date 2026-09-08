@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026～2027学年第一学期 信息学院硕士研究生课表 · 光电信息工程</title>
+<link rel="stylesheet" href="schedule.css">
+</head>
+<body>
+<header id="topBar" class="topbar"><div class="inner"></div></header>
+
+<div id="legend" class="legend"></div>
+
+<main class="page">
+  <h1 class="week-title">
+    <span id="weekRangeTitle">课程日历</span>
+    <span class="hint">按真实时间摆放 · 点击色块查看课程详情</span>
+  </h1>
+
+  <div class="scroll-x">
+    <div id="cal" class="cal"></div>
+  </div>
+
+  <section class="list-section">
+    <h2><span class="bar"></span>本周课程明细 <span class="sub" id="weekListTitle"></span></h2>
+    <div class="table-wrap">
+      <table class="lt">
+        <thead>
+          <tr><th>上课时间</th><th>时刻</th><th>课程</th><th>教室</th><th>任课教师</th><th>类别/学时</th><th>100%形成性评价</th></tr>
+        </thead>
+        <tbody id="weekBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="list-section">
+    <h2><span class="bar"></span>本学期课程总览（第2～18周，共13条安排）</h2>
+    <div class="table-wrap">
+      <table class="lt">
+        <thead>
+          <tr>
+            <th>课程名称</th><th>类别</th><th>总学时</th><th>上课时间</th><th>时刻</th>
+            <th>开课周次</th><th>教室</th><th>任课教师</th><th>100%形成性评价</th>
+          </tr>
+        </thead>
+        <tbody id="allBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="notes" class="notes"></section>
+</main>
+
+<div id="detail" class="detail" style="display:none"></div>
+
+<footer class="foot">数据来源：《信息学院-2026～2027学年第一学期硕士研究生专业课程表.pdf》· 年级专业：26级电子信息（光电信息工程）</footer>
+
+<script src="schedule-data.js"></script>
+<script src="schedule.js"></script>
+</body>
+</html>

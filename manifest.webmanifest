@@ -1,0 +1,16 @@
+{
+  "name": "信息学院硕士研究生课表（2026～2027-1）",
+  "short_name": "课表",
+  "description": "信息学院2026～2027学年第一学期硕士研究生课表，含6个专业",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f4f6fb",
+  "theme_color": "#2f6fed",
+  "lang": "zh-CN",
+  "icons": [
+    { "src": "icon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ]
+}

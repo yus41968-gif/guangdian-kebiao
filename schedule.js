@@ -402,5 +402,15 @@
     renderAllTable();
     buildLegend();
     buildNotes();
+    registerServiceWorker();
   });
+
+  /* PWA：注册 Service Worker（离线可用 / 可添加到手机主屏） */
+  function registerServiceWorker() {
+    try {
+      if ("serviceWorker" in navigator && location.protocol === "https:") {
+        navigator.serviceWorker.register("sw.js").catch(function () { /* ignore */ });
+      }
+    } catch (e) { /* ignore */ }
+  }
 })();

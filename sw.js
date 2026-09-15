@@ -1,7 +1,7 @@
 /* 课表网站 Service Worker：静态资源离线缓存
  * 维护提示：更新网站文件时，把下面的 VERSION 改大一次（如 kb-v5），
  * 用户下次打开会自动拉取新版并清理旧缓存。 */
-const VERSION = "kb-v4";
+const VERSION = "kb-v5";
 const CACHE = VERSION;
 const ASSETS = [
   "./",

@@ -176,9 +176,10 @@
     cal.innerHTML = "";
 
     var today = new Date(); today.setHours(0, 0, 0, 0);
-    var monday = new Date(today);
-    monday.setDate(monday.getDate() - ((today.getDay() + 6) % 7));
-    var isCurrentWeek = weekOfMonday(monday) === state.week;
+    var todayMon = new Date(today);
+    todayMon.setDate(todayMon.getDate() - ((today.getDay() + 6) % 7)); // 今天所在周的周一
+    var isCurrentWeek = weekOfMonday(todayMon) === state.week;
+    var wkMon = mondayOfWeek(state.week);   // 当前所选周的周一（日期以它为准）
     var list = entries().filter(function (e) { return e.weeks.indexOf(state.week) >= 0; });
 
     /* 表头 */
@@ -191,7 +192,7 @@
     for (var d = 1; d <= 7; d++) {
       var dc = document.createElement("div");
       dc.className = "head-cell day-cell" + (d >= 6 ? " wkend" : "");
-      var dm = new Date(monday); dm.setDate(dm.getDate() + (d - 1));
+      var dm = new Date(wkMon); dm.setDate(dm.getDate() + (d - 1));
       var isToday = isCurrentWeek && (today.getDay() + 6) % 7 === d - 1;
       dc.innerHTML = '<span class="dn">' + DAYS[d - 1] + "</span>" +
         '<span class="dd' + (isToday ? " tday" : "") + '">' + fmtShort(dm) + "</span>";
